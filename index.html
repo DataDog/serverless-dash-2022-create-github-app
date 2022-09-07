@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Create your GitHub app</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="floating-labels.css" rel="stylesheet">
+    <script src="./script.js"></script>
+  </head>
+
+  <body>
+    <form class="form-signin" id="form" method="POST" action="https://github.com/settings/apps/new">
+      <div class="text-center mb-4">
+        <img class="mb-4" src="dd_icon_rgb.png" alt="" width="72">
+        <h1 class="h3 mb-3 font-weight-normal">Create your GitHub App</h1>
+      </div>
+
+      <div class="form-label-group">
+        <input type="text" id="inputAppName" class="form-control" placeholder="App name (auto-generated)" disabled>
+        <label for="inputAppName">App name (auto-generated)</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="text" id="inputAppUrl" class="form-control" placeholder="Value of $GITHUB_APP_URL" autofocus>
+        <label for="inputAppUrl">Value of <code>$GITHUB_APP_URL</code></label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="text" id="inputWebhookUrl" class="form-control" placeholder="Value of $GITHUB_WEBHOOK_URL">
+        <label for="inputWebhookUrl">Value of <code>$GITHUB_WEBHOOK_URL</code></label>
+      </div>
+
+      <p>Note: you'll be asked to login to GitHub if you're not currently logged-in</p>
+      <button id="inputSubmit" class="btn btn-lg btn-primary btn-block" type="button">Create app</button>
+      <textarea name="manifest" rows=10 cols=100 id="manifest" class="hidden"></textarea>
+    </form>
+    </body>
+</html>
